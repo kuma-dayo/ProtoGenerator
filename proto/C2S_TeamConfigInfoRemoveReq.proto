@@ -1,0 +1,5 @@
+syntax = "proto2";
+
+message C2S_TeamConfigInfoRemoveReq {
+    required int32 index = 1;
+}

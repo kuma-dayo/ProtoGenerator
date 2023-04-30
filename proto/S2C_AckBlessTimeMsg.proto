@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "BlessTimeInfo.proto";
+message S2C_AckBlessTimeMsg {
+    repeated BlessTimeInfo infoList = 1;
+}

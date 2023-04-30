@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+import "PlayerInfo.proto";
+message S2C_UpdatePlayerInfoResult {
+    required bool isSuccess = 1;
+    required PlayerInfo addedPlayerInfo = 2;
+}

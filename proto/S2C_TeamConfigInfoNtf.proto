@@ -1,0 +1,5 @@
+syntax = "proto2";
+
+message S2C_TeamConfigInfoNtf {
+    repeated int32 configInfo = 1;
+}

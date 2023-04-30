@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+import "SHollowMapLevelItemData.proto";
+message S2C_EnterHollowMapLevelItemAck {
+    required bool ret = 1;
+    required int32 enterMapTemplateID = 2;
+    required SHollowMapLevelItemData hollowMapLevelItemData = 3;
+}

@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+message S2C_AvatarPropertyInfoUpdateAck {
+    required bool ret = 1;
+    required int32 avatarID = 2;
+    required int32 propertyType = 3;
+    required float newValue = 4;
+}

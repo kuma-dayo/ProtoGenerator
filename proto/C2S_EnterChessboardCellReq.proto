@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+message C2S_EnterChessboardCellReq {
+    required uint64 composeUID = 1;
+    required int32 cellIndex = 2;
+}

@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+message S2C_ResPurchaseResult {
+    required bool isSuccess = 1;
+    required int32 goodID = 2;
+    required int32 cnt = 3;
+    required int32 consumeCoin = 4;
+}

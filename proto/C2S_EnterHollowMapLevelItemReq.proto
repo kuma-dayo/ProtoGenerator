@@ -1,0 +1,5 @@
+syntax = "proto2";
+
+message C2S_EnterHollowMapLevelItemReq {
+    required int32 enterMapTemplateID = 1;
+}

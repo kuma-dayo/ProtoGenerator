@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "SGameProcesseType.proto";
+message C2S_EnterGameReq {
+    required SGameProcesseType gameProcesseType = 1;
+}

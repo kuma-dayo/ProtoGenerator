@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+message TarotCardInfo {
+    required int32 id = 1;
+    required int32 num = 2;
+}

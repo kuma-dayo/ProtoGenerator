@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+import "ActiveTalentInfo.proto";
+import "UpgradeActiveTalentResult.proto";
+message S2C_UpgradeActiveTalent {
+    required UpgradeActiveTalentResult upgradeResult = 1;
+    required ActiveTalentInfo talentInfo = 2;
+}

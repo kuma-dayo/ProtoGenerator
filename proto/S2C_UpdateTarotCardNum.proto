@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "TarotCardInfo.proto";
+message S2C_UpdateTarotCardNum {
+    repeated TarotCardInfo tarrotCardInfoList = 1;
+}

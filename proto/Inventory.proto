@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+import "Rewards.proto";
+message Inventory {
+    required int32 coins = 1;
+    required int32 residue = 2;
+    required Rewards rewardDict = 3;
+}

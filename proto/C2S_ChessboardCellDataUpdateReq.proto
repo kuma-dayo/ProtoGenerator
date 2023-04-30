@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+import "SChessboardCellData.proto";
+message C2S_ChessboardCellDataUpdateReq {
+    required uint64 composeUID = 1;
+    required SChessboardCellData cellData = 2;
+}

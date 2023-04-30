@@ -1,0 +1,4 @@
+syntax = "proto2";
+
+message S2C_AckCostBlessTimeMsg {
+}

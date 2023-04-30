@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "SGameProcessInfo.proto";
+message S2C_GameProcessInfoAck {
+    required SGameProcessInfo info = 1;
+}

@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "Inventory.proto";
+message S2C_GetInventory {
+    required Inventory inventory = 1;
+}

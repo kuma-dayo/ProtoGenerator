@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "BlessTimeInfo.proto";
+message C2S_UpdateBlessTimeMsg {
+    repeated BlessTimeInfo infoList = 1;
+}

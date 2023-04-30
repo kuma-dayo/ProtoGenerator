@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+import "StaminaEffSource.proto";
+message C2S_SetStaminaEff {
+    required float eff = 1;
+    required StaminaEffSource source = 2;
+}

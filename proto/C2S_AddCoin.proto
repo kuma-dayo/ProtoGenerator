@@ -1,0 +1,5 @@
+syntax = "proto2";
+
+message C2S_AddCoin {
+    required int32 coinNum = 1;
+}

@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "Inventory.proto";
+message C2S_UpdateInventory {
+    required Inventory addedInventory = 1;
+}

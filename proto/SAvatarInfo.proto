@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+import "SPropertyInfo.proto";
+message SAvatarInfo {
+    required int32 avatarID = 255;
+    required int32 weaponID = 2;
+    required bool isDead = 3;
+    repeated SPropertyInfo propertyMap = 4;
+}

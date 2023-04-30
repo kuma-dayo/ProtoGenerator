@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+message HollowStaminaInfo {
+    required int32 curStamina = 1;
+    required int32 staminaMin = 2;
+    required int32 staminaMax = 3;
+}

@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "PlayerInfo.proto";
+message C2S_UpdatePlayerInfo {
+    required PlayerInfo addedPlayerInfo = 1;
+}

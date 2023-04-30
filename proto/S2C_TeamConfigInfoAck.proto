@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+message S2C_TeamConfigInfoAck {
+    required bool ret = 1;
+    repeated int32 configInfo = 2;
+}

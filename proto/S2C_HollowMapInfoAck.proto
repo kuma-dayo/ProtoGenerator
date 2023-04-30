@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "SHollowMapLevelData.proto";
+message S2C_HollowMapInfoAck {
+    required SHollowMapLevelData hollowMapLevelData = 1;
+}

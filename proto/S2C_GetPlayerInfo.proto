@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "PlayerInfo.proto";
+message S2C_GetPlayerInfo {
+    required PlayerInfo playerInfo = 1;
+}

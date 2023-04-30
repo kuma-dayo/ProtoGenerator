@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+message C2S_EnterHollowMapLevelLayerReq {
+    required int32 enterMapTemplateID = 1;
+    required int32 enterMapLayer = 2;
+    required bool reLayoutChessboard = 3;
+}

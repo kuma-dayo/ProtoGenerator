@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+import "SChessboardCellBlockadeData.proto";
+import "SChessboardCellEventData.proto";
+message SChessboardCellData {
+    required uint64 cellRuntimeID = 1;
+    required int32 cellIndex = 2;
+    required int32 cellState = 3;
+    required SChessboardCellEventData eventData = 4;
+    required SChessboardCellBlockadeData blockadeData = 5;
+}

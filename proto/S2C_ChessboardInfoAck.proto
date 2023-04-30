@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+import "SChessboardData.proto";
+message S2C_ChessboardInfoAck {
+    required bool ret = 1;
+    required uint64 composeUID = 2;
+    required SChessboardData configChessboardData = 3;
+}

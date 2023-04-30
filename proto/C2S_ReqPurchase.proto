@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+message C2S_ReqPurchase {
+    required int32 goodID = 1;
+    required int32 cnt = 2;
+    required int32 price = 3;
+}

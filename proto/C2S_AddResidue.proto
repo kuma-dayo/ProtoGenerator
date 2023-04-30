@@ -1,0 +1,5 @@
+syntax = "proto2";
+
+message C2S_AddResidue {
+    required int32 residueNum = 1;
+}

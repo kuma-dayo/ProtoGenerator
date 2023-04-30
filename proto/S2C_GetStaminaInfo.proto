@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+import "HollowStaminaInfo.proto";
+message S2C_GetStaminaInfo {
+    required HollowStaminaInfo info = 1;
+    required bool isStaminaOverload = 2;
+}

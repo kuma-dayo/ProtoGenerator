@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+message S2C_TeamConfigInfoAddAck {
+    required bool ret = 1;
+    required int32 index = 2;
+    required int32 avatarTID = 3;
+}

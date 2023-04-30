@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+message UserInfo {
+    required string name = 1;
+    required int32 age = 2;
+    required string sex = 3;
+    required string addr = 4;
+    repeated int32 finishedMapTIDList = 5;
+}

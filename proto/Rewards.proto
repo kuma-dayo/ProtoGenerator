@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "Reward.proto";
+message Rewards {
+    repeated Reward r = 1;
+}

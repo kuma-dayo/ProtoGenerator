@@ -1,0 +1,5 @@
+syntax = "proto2";
+
+message S2C_ResBattlePoint {
+    required int32 battlePoint = 1;
+}

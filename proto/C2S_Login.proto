@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "UserInfo.proto";
+message C2S_Login {
+    required UserInfo info = 1;
+}

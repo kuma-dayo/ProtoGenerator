@@ -1,0 +1,1511 @@
+{
+    "C2S_ReqBattlePoint": {
+        "type": "message",
+        "fields": []
+    },
+    "S2C_ResBattlePoint": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "battlePoint",
+                "type": "int",
+                "field_number": 1
+            }
+        ]
+    },
+    "Reward": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "id",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "cnt",
+                "type": "int",
+                "field_number": 2
+            }
+        ]
+    },
+    "Rewards": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "r",
+                "type": "List<Reward>",
+                "field_number": 1
+            }
+        ]
+    },
+    "HollowBattleSettlement": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "isSuccess",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "ranking",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "coins",
+                "type": "int",
+                "field_number": 3
+            },
+            {
+                "name": "residue",
+                "type": "int",
+                "field_number": 4
+            },
+            {
+                "name": "seconds",
+                "type": "float",
+                "field_number": 5
+            },
+            {
+                "name": "damage",
+                "type": "int",
+                "field_number": 6
+            },
+            {
+                "name": "rewardDict",
+                "type": "Rewards",
+                "field_number": 7
+            },
+            {
+                "name": "battleEventID",
+                "type": "int",
+                "field_number": 8
+            },
+            {
+                "name": "battleCellIndex",
+                "type": "int",
+                "field_number": 9
+            },
+            {
+                "name": "battleCellEventID",
+                "type": "int",
+                "field_number": 10
+            }
+        ]
+    },
+    "C2S_EndHollowBattle": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "result",
+                "type": "HollowBattleSettlement",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_EndHollowBattle": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "isSaveSuccess",
+                "type": "bool",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_GetHollowSettlementInfo": {
+        "type": "message",
+        "fields": []
+    },
+    "S2C_GetHollowSettlementInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "result",
+                "type": "HollowBattleSettlement",
+                "field_number": 1
+            }
+        ]
+    },
+    "ActiveTalentInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "talentID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "talentLevel",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "talentResidue",
+                "type": "int",
+                "field_number": 3
+            },
+            {
+                "name": "talentMaxLevel",
+                "type": "int",
+                "field_number": 4
+            }
+        ]
+    },
+    "ActiveTalentInfGroup": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "activeTalentInfoGroup",
+                "type": "List<ActiveTalentInfo>",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_GetActiveTalentInfoGroup": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "activeTalentInfoGroup",
+                "type": "ActiveTalentInfGroup",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_GetActiveTalentInfoGroup": {
+        "type": "message",
+        "fields": []
+    },
+    "C2S_UpgradeActiveTalent": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "talentID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "count",
+                "type": "int",
+                "field_number": 2
+            }
+        ]
+    },
+    "S2C_UpgradeActiveTalent": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "upgradeResult",
+                "type": "UpgradeActiveTalentResult",
+                "field_number": 1
+            },
+            {
+                "name": "talentInfo",
+                "type": "ActiveTalentInfo",
+                "field_number": 2
+            }
+        ]
+    },
+    "ActiveTalentType": {
+        "type": "enum",
+        "values": [
+            {
+                "name": "Unknow",
+                "value": "0"
+            },
+            {
+                "name": "Ability",
+                "value": "1"
+            },
+            {
+                "name": "Coin",
+                "value": "2"
+            },
+            {
+                "name": "Stamina",
+                "value": "3"
+            }
+        ]
+    },
+    "UpgradeActiveTalentResult": {
+        "type": "enum",
+        "values": [
+            {
+                "name": "Success",
+                "value": "0"
+            },
+            {
+                "name": "SuccessUpgrade",
+                "value": "1"
+            },
+            {
+                "name": "Fail",
+                "value": "2"
+            },
+            {
+                "name": "FailMaxLv",
+                "value": "3"
+            },
+            {
+                "name": "FailLackResidue",
+                "value": "4"
+            }
+        ]
+    },
+    "SChessboardCellEventData": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "eventID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "initEventID",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "completedCount",
+                "type": "int",
+                "field_number": 3
+            }
+        ]
+    },
+    "SChessboardCellBlockadeData": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "blockadeCnt",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "blockadeCells",
+                "type": "List<int>",
+                "field_number": 2
+            },
+            {
+                "name": "parentBlockadeCell",
+                "type": "int",
+                "field_number": 3
+            }
+        ]
+    },
+    "SChessboardCellData": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "cellRuntimeID",
+                "type": "ulong",
+                "field_number": 1
+            },
+            {
+                "name": "cellIndex",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "cellState",
+                "type": "int",
+                "field_number": 3
+            },
+            {
+                "name": "eventData",
+                "type": "SChessboardCellEventData",
+                "field_number": 4
+            },
+            {
+                "name": "blockadeData",
+                "type": "SChessboardCellBlockadeData",
+                "field_number": 5
+            }
+        ]
+    },
+    "SChessboardData": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "chessboardTID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "mapGroupTID",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "randomSeed",
+                "type": "int",
+                "field_number": 3
+            },
+            {
+                "name": "stayCellIndex",
+                "type": "int",
+                "field_number": 4
+            },
+            {
+                "name": "chessboardRows",
+                "type": "int",
+                "field_number": 5
+            },
+            {
+                "name": "chessboardCols",
+                "type": "int",
+                "field_number": 6
+            },
+            {
+                "name": "chessboardCellDataMap",
+                "type": "List<SChessboardCellData>",
+                "field_number": 7
+            }
+        ]
+    },
+    "C2S_ChessboardInfoReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "composeUID",
+                "type": "ulong",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_ChessboardInfoAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "ret",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "composeUID",
+                "type": "ulong",
+                "field_number": 2
+            },
+            {
+                "name": "configChessboardData",
+                "type": "SChessboardData",
+                "field_number": 3
+            }
+        ]
+    },
+    "S2C_ChessboardInfoNtf": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "ret",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "composeUID",
+                "type": "ulong",
+                "field_number": 2
+            },
+            {
+                "name": "configChessboardData",
+                "type": "SChessboardData",
+                "field_number": 3
+            }
+        ]
+    },
+    "C2S_EnterChessboardCellReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "composeUID",
+                "type": "ulong",
+                "field_number": 1
+            },
+            {
+                "name": "cellIndex",
+                "type": "int",
+                "field_number": 2
+            }
+        ]
+    },
+    "S2C_EnterChessboardCellAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "ret",
+                "type": "bool",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_ChessboardCellDataUpdateReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "composeUID",
+                "type": "ulong",
+                "field_number": 1
+            },
+            {
+                "name": "cellData",
+                "type": "SChessboardCellData",
+                "field_number": 2
+            }
+        ]
+    },
+    "S2C_ChessboardCellDataUpdateAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "ret",
+                "type": "bool",
+                "field_number": 1
+            }
+        ]
+    },
+    "SGameProcessInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "gameProcesseType",
+                "type": "SGameProcesseType",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_GameProcessInfoReq": {
+        "type": "message",
+        "fields": []
+    },
+    "S2C_GameProcessInfoAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "info",
+                "type": "SGameProcessInfo",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_GameProcessInfoNtf": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "info",
+                "type": "SGameProcessInfo",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_EnterGameReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "gameProcesseType",
+                "type": "SGameProcesseType",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_EnterGameAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "gameProcesseType",
+                "type": "SGameProcesseType",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_EnterHollowGameModeReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "gameMode",
+                "type": "SHollowGameMode",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_EnterHollowGameModeAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "gameMode",
+                "type": "SHollowGameMode",
+                "field_number": 1
+            }
+        ]
+    },
+    "SGameProcesseType": {
+        "type": "enum",
+        "values": [
+            {
+                "name": "NewGame",
+                "value": "0"
+            },
+            {
+                "name": "LobbyGame",
+                "value": "1"
+            },
+            {
+                "name": "HollowGame",
+                "value": "2"
+            }
+        ]
+    },
+    "SHollowGameMode": {
+        "type": "enum",
+        "values": [
+            {
+                "name": "LobbyMode",
+                "value": "0"
+            },
+            {
+                "name": "HollowMode",
+                "value": "1"
+            },
+            {
+                "name": "InLevelMode",
+                "value": "2"
+            }
+        ]
+    },
+    "SGameBlessTimeType": {
+        "type": "enum",
+        "values": [
+            {
+                "name": "Normal",
+                "value": "0"
+            },
+            {
+                "name": "NormalBattle",
+                "value": "1"
+            },
+            {
+                "name": "EliteBattle",
+                "value": "2"
+            },
+            {
+                "name": "BossBalttle",
+                "value": "3"
+            },
+            {
+                "name": "Treasure",
+                "value": "4"
+            }
+        ]
+    },
+    "SHollowMapLevelExtData": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "hollowMapExtItemID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "hollowMapChessboardID",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "hollowMapGroupID",
+                "type": "int",
+                "field_number": 3
+            },
+            {
+                "name": "layerStressRecover",
+                "type": "float",
+                "field_number": 4
+            }
+        ]
+    },
+    "SHollowMapLevelItemData": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "hollowMapTemplateID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "stayMapLayer",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "isFinished",
+                "type": "bool",
+                "field_number": 3
+            },
+            {
+                "name": "hollowMapLevelExtDatas",
+                "type": "List<SHollowMapLevelExtData>",
+                "field_number": 4
+            },
+            {
+                "name": "enterTimeStamp",
+                "type": "long",
+                "field_number": 5
+            }
+        ]
+    },
+    "SHollowMapLevelData": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "stayMapTemplateID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "hollowMapLevelItemDatas",
+                "type": "List<SHollowMapLevelItemData>",
+                "field_number": 2
+            }
+        ]
+    },
+    "C2S_HollowMapInfoReq": {
+        "type": "message",
+        "fields": []
+    },
+    "S2C_HollowMapInfoAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "hollowMapLevelData",
+                "type": "SHollowMapLevelData",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_EnterHollowMapLevelItemReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "enterMapTemplateID",
+                "type": "int",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_EnterHollowMapLevelItemAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "ret",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "enterMapTemplateID",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "hollowMapLevelItemData",
+                "type": "SHollowMapLevelItemData",
+                "field_number": 3
+            }
+        ]
+    },
+    "C2S_EnterHollowMapLevelLayerReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "enterMapTemplateID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "enterMapLayer",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "reLayoutChessboard",
+                "type": "bool",
+                "field_number": 3
+            }
+        ]
+    },
+    "S2C_EnterHollowMapLevelLayerAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "ret",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "enterMapTemplateID",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "enterMapLayer",
+                "type": "int",
+                "field_number": 3
+            },
+            {
+                "name": "isFinished",
+                "type": "bool",
+                "field_number": 4
+            },
+            {
+                "name": "reLayoutChessboard",
+                "type": "bool",
+                "field_number": 5
+            },
+            {
+                "name": "configChessboardData",
+                "type": "SChessboardData",
+                "field_number": 6
+            }
+        ]
+    },
+    "UserInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "name",
+                "type": "string",
+                "field_number": 1
+            },
+            {
+                "name": "age",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "sex",
+                "type": "string",
+                "field_number": 3
+            },
+            {
+                "name": "addr",
+                "type": "string",
+                "field_number": 4
+            },
+            {
+                "name": "finishedMapTIDList",
+                "type": "List<int>",
+                "field_number": 5
+            }
+        ]
+    },
+    "C2S_Login": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "info",
+                "type": "UserInfo",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_Login": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "info",
+                "type": "UserInfo",
+                "field_number": 1
+            }
+        ]
+    },
+    "SPropertyInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "propertyType",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "propertyValue",
+                "type": "float",
+                "field_number": 2
+            }
+        ]
+    },
+    "SAvatarInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "avatarID",
+                "type": "int",
+                "field_number": 255
+            },
+            {
+                "name": "weaponID",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "isDead",
+                "type": "bool",
+                "field_number": 3
+            },
+            {
+                "name": "propertyMap",
+                "type": "List<SPropertyInfo>",
+                "field_number": 4
+            }
+        ]
+    },
+    "STeamInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "avatarInfos",
+                "type": "List<SAvatarInfo>",
+                "field_number": 1
+            },
+            {
+                "name": "curPressure",
+                "type": "float",
+                "field_number": 2
+            },
+            {
+                "name": "maxPressure",
+                "type": "float",
+                "field_number": 3
+            }
+        ]
+    },
+    "C2S_AvatarPropertyInfoUpdateReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "avatarID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "propertyType",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "newValue",
+                "type": "float",
+                "field_number": 3
+            }
+        ]
+    },
+    "S2C_AvatarPropertyInfoUpdateAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "ret",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "avatarID",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "propertyType",
+                "type": "int",
+                "field_number": 3
+            },
+            {
+                "name": "newValue",
+                "type": "float",
+                "field_number": 4
+            }
+        ]
+    },
+    "S2C_AvatarPropertyInfoUpdateNtf": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "avatarID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "propertyType",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "newValue",
+                "type": "float",
+                "field_number": 3
+            }
+        ]
+    },
+    "S2C_AvatarPropertyInfosUpdateNtf": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "avatarInfo",
+                "type": "SAvatarInfo",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_TeamConfigInfoReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "number",
+                "type": "int",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_TeamConfigInfoAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "ret",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "configInfo",
+                "type": "List<int>",
+                "field_number": 2
+            }
+        ]
+    },
+    "S2C_TeamConfigInfoNtf": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "configInfo",
+                "type": "List<int>",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_TeamConfigInfoAddReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "index",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "avatarTID",
+                "type": "int",
+                "field_number": 3
+            }
+        ]
+    },
+    "S2C_TeamConfigInfoAddAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "ret",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "index",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "avatarTID",
+                "type": "int",
+                "field_number": 3
+            }
+        ]
+    },
+    "C2S_TeamConfigInfoRemoveReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "index",
+                "type": "int",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_TeamConfigInfoRemoveAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "ret",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "index",
+                "type": "int",
+                "field_number": 2
+            }
+        ]
+    },
+    "C2S_TeamAvatarsInfoReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "number",
+                "type": "int",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_TeamAvatarsInfoAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "ret",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "info",
+                "type": "STeamInfo",
+                "field_number": 2
+            },
+            {
+                "name": "configInfo",
+                "type": "List<int>",
+                "field_number": 3
+            }
+        ]
+    },
+    "S2C_TeamAvatarsInfoNtf": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "info",
+                "type": "STeamInfo",
+                "field_number": 1
+            },
+            {
+                "name": "configInfo",
+                "type": "List<int>",
+                "field_number": 2
+            }
+        ]
+    },
+    "S2C_TeamAvatarDieNtf": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "isDie",
+                "type": "bool",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_TeamAvatarReviveReq": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "avatarTID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "avatarHp",
+                "type": "float",
+                "field_number": 2
+            }
+        ]
+    },
+    "S2C_TeamAvatarReviveAck": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "ret",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "errorCode",
+                "type": "List<int>",
+                "field_number": 2
+            },
+            {
+                "name": "avatarInfo",
+                "type": "SAvatarInfo",
+                "field_number": 3
+            }
+        ]
+    },
+    "BlessTimeInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "blessID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "remainTime",
+                "type": "int",
+                "field_number": 3
+            }
+        ]
+    },
+    "C2S_UpdateBlessTimeMsg": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "infoList",
+                "type": "List<BlessTimeInfo>",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_ReqBlessTimeMsg": {
+        "type": "message",
+        "fields": []
+    },
+    "S2C_AckBlessTimeMsg": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "infoList",
+                "type": "List<BlessTimeInfo>",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_NtfBlessTimeMsg": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "infoList",
+                "type": "List<BlessTimeInfo>",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_ReqCostBlessTimeMsg": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "blessTimeType",
+                "type": "SGameBlessTimeType",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_AckCostBlessTimeMsg": {
+        "type": "message",
+        "fields": []
+    },
+    "C2S_ReqPurchase": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "goodID",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "cnt",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "price",
+                "type": "int",
+                "field_number": 3
+            }
+        ]
+    },
+    "S2C_ResPurchaseResult": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "isSuccess",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "goodID",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "cnt",
+                "type": "int",
+                "field_number": 3
+            },
+            {
+                "name": "consumeCoin",
+                "type": "int",
+                "field_number": 4
+            }
+        ]
+    },
+    "HollowStaminaInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "curStamina",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "staminaMin",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "staminaMax",
+                "type": "int",
+                "field_number": 3
+            }
+        ]
+    },
+    "C2S_GetStaminaInfo": {
+        "type": "message",
+        "fields": []
+    },
+    "S2C_GetStaminaInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "info",
+                "type": "HollowStaminaInfo",
+                "field_number": 1
+            },
+            {
+                "name": "isStaminaOverload",
+                "type": "bool",
+                "field_number": 2
+            }
+        ]
+    },
+    "C2S_UpdateStaminaInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "staminaDelta",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "staminaRatio",
+                "type": "float",
+                "field_number": 2
+            },
+            {
+                "name": "staminaMax",
+                "type": "int",
+                "field_number": 3
+            },
+            {
+                "name": "staminaDeltaByBless",
+                "type": "int",
+                "field_number": 4
+            },
+            {
+                "name": "staminaRatioByBless",
+                "type": "float",
+                "field_number": 5
+            }
+        ]
+    },
+    "S2C_UpdateStaminaInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "result",
+                "type": "bool",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_SetStaminaEff": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "eff",
+                "type": "float",
+                "field_number": 1
+            },
+            {
+                "name": "source",
+                "type": "StaminaEffSource",
+                "field_number": 2
+            }
+        ]
+    },
+    "StaminaEffSource": {
+        "type": "enum",
+        "values": [
+            {
+                "name": "ActiveTalent",
+                "value": "1"
+            },
+            {
+                "name": "HollowMap",
+                "value": "2"
+            }
+        ]
+    },
+    "Inventory": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "coins",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "residue",
+                "type": "int",
+                "field_number": 2
+            },
+            {
+                "name": "rewardDict",
+                "type": "Rewards",
+                "field_number": 3
+            }
+        ]
+    },
+    "C2S_GetInventory": {
+        "type": "message",
+        "fields": []
+    },
+    "S2C_GetInventory": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "inventory",
+                "type": "Inventory",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_UpdateInventory": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "addedInventory",
+                "type": "Inventory",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_UpdateInventoryResult": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "isSuccess",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "addedInventory",
+                "type": "Inventory",
+                "field_number": 2
+            },
+            {
+                "name": "autoUseItmsTypeList",
+                "type": "List<int>",
+                "field_number": 3
+            },
+            {
+                "name": "staminaItemIsOverload",
+                "type": "bool",
+                "field_number": 4
+            }
+        ]
+    },
+    "C2S_AddCoin": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "coinNum",
+                "type": "int",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_AddResidue": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "residueNum",
+                "type": "int",
+                "field_number": 1
+            }
+        ]
+    },
+    "PlayerInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "residue",
+                "type": "int",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_GetPlayerInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "playerInfo",
+                "type": "PlayerInfo",
+                "field_number": 1
+            }
+        ]
+    },
+    "C2S_UpdatePlayerInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "addedPlayerInfo",
+                "type": "PlayerInfo",
+                "field_number": 1
+            }
+        ]
+    },
+    "S2C_UpdatePlayerInfoResult": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "isSuccess",
+                "type": "bool",
+                "field_number": 1
+            },
+            {
+                "name": "addedPlayerInfo",
+                "type": "PlayerInfo",
+                "field_number": 2
+            }
+        ]
+    },
+    "TarotCardInfo": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "id",
+                "type": "int",
+                "field_number": 1
+            },
+            {
+                "name": "num",
+                "type": "int",
+                "field_number": 2
+            }
+        ]
+    },
+    "S2C_UpdateTarotCardNum": {
+        "type": "message",
+        "fields": [
+            {
+                "name": "tarrotCardInfoList",
+                "type": "List<TarotCardInfo>",
+                "field_number": 1
+            }
+        ]
+    }
+}

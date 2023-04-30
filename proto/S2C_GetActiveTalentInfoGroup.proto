@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "ActiveTalentInfGroup.proto";
+message S2C_GetActiveTalentInfoGroup {
+    required ActiveTalentInfGroup activeTalentInfoGroup = 1;
+}

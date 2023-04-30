@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+message SChessboardCellEventData {
+    required int32 eventID = 1;
+    required int32 initEventID = 2;
+    required int32 completedCount = 3;
+}

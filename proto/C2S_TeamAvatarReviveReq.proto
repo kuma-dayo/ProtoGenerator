@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+message C2S_TeamAvatarReviveReq {
+    required int32 avatarTID = 1;
+    required float avatarHp = 2;
+}

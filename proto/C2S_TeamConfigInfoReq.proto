@@ -1,0 +1,5 @@
+syntax = "proto2";
+
+message C2S_TeamConfigInfoReq {
+    required int32 number = 1;
+}

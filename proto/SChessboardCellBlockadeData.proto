@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+message SChessboardCellBlockadeData {
+    required int32 blockadeCnt = 1;
+    repeated int32 blockadeCells = 2;
+    required int32 parentBlockadeCell = 3;
+}

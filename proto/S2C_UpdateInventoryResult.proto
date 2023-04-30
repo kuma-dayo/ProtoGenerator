@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+import "Inventory.proto";
+message S2C_UpdateInventoryResult {
+    required bool isSuccess = 1;
+    required Inventory addedInventory = 2;
+    repeated int32 autoUseItmsTypeList = 3;
+    required bool staminaItemIsOverload = 4;
+}

@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "HollowBattleSettlement.proto";
+message C2S_EndHollowBattle {
+    required HollowBattleSettlement result = 1;
+}

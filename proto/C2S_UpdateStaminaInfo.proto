@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+message C2S_UpdateStaminaInfo {
+    required int32 staminaDelta = 1;
+    required float staminaRatio = 2;
+    required int32 staminaMax = 3;
+    required int32 staminaDeltaByBless = 4;
+    required float staminaRatioByBless = 5;
+}

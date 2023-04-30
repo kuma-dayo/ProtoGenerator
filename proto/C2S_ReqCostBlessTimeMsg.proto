@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+import "SGameBlessTimeType.proto";
+message C2S_ReqCostBlessTimeMsg {
+    required SGameBlessTimeType blessTimeType = 1;
+}

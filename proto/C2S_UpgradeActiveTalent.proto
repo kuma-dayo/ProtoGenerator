@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+message C2S_UpgradeActiveTalent {
+    required int32 talentID = 1;
+    required int32 count = 2;
+}

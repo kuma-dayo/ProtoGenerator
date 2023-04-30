@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+import "Rewards.proto";
+message HollowBattleSettlement {
+    required bool isSuccess = 1;
+    required int32 ranking = 2;
+    required int32 coins = 3;
+    required int32 residue = 4;
+    required float seconds = 5;
+    required int32 damage = 6;
+    required Rewards rewardDict = 7;
+    required int32 battleEventID = 8;
+    required int32 battleCellIndex = 9;
+    required int32 battleCellEventID = 10;
+}

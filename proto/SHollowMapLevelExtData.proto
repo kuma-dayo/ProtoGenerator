@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+message SHollowMapLevelExtData {
+    required int32 hollowMapExtItemID = 1;
+    required int32 hollowMapChessboardID = 2;
+    required int32 hollowMapGroupID = 3;
+    required float layerStressRecover = 4;
+}

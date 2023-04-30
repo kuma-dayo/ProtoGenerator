@@ -1,0 +1,4 @@
+syntax = "proto2";
+
+message C2S_GetStaminaInfo {
+}

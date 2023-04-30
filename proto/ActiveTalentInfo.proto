@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+message ActiveTalentInfo {
+    required int32 talentID = 1;
+    required int32 talentLevel = 2;
+    required int32 talentResidue = 3;
+    required int32 talentMaxLevel = 4;
+}

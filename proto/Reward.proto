@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+message Reward {
+    required int32 id = 1;
+    required int32 cnt = 2;
+}

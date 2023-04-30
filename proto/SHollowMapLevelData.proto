@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+import "SHollowMapLevelItemData.proto";
+message SHollowMapLevelData {
+    required int32 stayMapTemplateID = 1;
+    repeated SHollowMapLevelItemData hollowMapLevelItemDatas = 2;
+}

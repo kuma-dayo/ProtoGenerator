@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+import "SAvatarInfo.proto";
+message S2C_TeamAvatarReviveAck {
+    required bool ret = 1;
+    repeated int32 errorCode = 2;
+    required SAvatarInfo avatarInfo = 3;
+}

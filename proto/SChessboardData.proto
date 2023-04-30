@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+import "SChessboardCellData.proto";
+message SChessboardData {
+    required int32 chessboardTID = 1;
+    required int32 mapGroupTID = 2;
+    required int32 randomSeed = 3;
+    required int32 stayCellIndex = 4;
+    required int32 chessboardRows = 5;
+    required int32 chessboardCols = 6;
+    repeated SChessboardCellData chessboardCellDataMap = 7;
+}

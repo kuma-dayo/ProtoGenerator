@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+import "STeamInfo.proto";
+message S2C_TeamAvatarsInfoNtf {
+    required STeamInfo info = 1;
+    repeated int32 configInfo = 2;
+}

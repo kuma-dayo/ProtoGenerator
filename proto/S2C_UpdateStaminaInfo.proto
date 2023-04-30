@@ -1,0 +1,5 @@
+syntax = "proto2";
+
+message S2C_UpdateStaminaInfo {
+    required bool result = 1;
+}

@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+message SPropertyInfo {
+    required int32 propertyType = 1;
+    required float propertyValue = 2;
+}

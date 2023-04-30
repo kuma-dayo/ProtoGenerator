@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+import "SChessboardData.proto";
+message S2C_EnterHollowMapLevelLayerAck {
+    required bool ret = 1;
+    required int32 enterMapTemplateID = 2;
+    required int32 enterMapLayer = 3;
+    required bool isFinished = 4;
+    required bool reLayoutChessboard = 5;
+    required SChessboardData configChessboardData = 6;
+}

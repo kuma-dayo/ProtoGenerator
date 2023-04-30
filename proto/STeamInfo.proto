@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+import "SAvatarInfo.proto";
+message STeamInfo {
+    repeated SAvatarInfo avatarInfos = 1;
+    required float curPressure = 2;
+    required float maxPressure = 3;
+}

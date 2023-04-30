@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+message BlessTimeInfo {
+    required int32 blessID = 1;
+    required int32 remainTime = 3;
+}
